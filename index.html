@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #0078d4;
+      color: #0078d4;
+    }
+    .tab i {
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #505050;
+    }
+    .form-value {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #2d2d2d;
+    }
+    .icon {
+      font-size: 12px;
+      color: #605e5c;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .styled-table thead {
+      background-color: #57c1b2;
+      color: white;
+      text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('identificacao')"><i class="fas fa-id-badge icon"></i>Identificação</button>
+    <button class="tab" onclick="showTab('escopo')"><i class="fas fa-list icon"></i>Escopo</button>
+    <button class="tab" onclick="showTab('estrategia')"><i class="fas fa-bullseye icon"></i>Estratégia</button>
+    <button class="tab" onclick="showTab('qualificacao')"><i class="fas fa-check-circle icon"></i>Qualificação</button>
+  </div>
+
+  <div id="identificacao" class="tab-content active">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-box icon"></i>Nome do Produto</label>
+      <div class="form-value">Subvenções para Investimento - Importação
+
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-align-left icon"></i>Descrição do Produto</label>
+      <p class="form-value">
+        Aplica benefícios fiscais de subvenção para investimentos vinculados à importação, reduzindo tributos como IRPJ e CSLL ao comprovar que os recursos foram usados para expansão, modernização ou inovação da empresa.      </p>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-barcode icon"></i>Código</label>
+      <div class="form-value">TAX009-01</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-sitemap icon"></i>Área</label>
+      <div class="form-value">Gestão Tributária</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-question-circle icon"></i>Classificação BCG</label>
+      <div class="form-value">Interrogação</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="escopo" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-file-alt icon"></i>Escopo</label>
+      <div class="form-value">
+        <ol data-start="102" data-end="838">
+          <li data-start="102" data-end="248" class="" style="">
+          <p data-start="105" data-end="248" class=""><strong data-start="105" data-end="142">Identificação do Benefício Fiscal</strong><br data-start="142" data-end="145">
+          Mapeamento de incentivos estaduais aplicáveis às importações (ex: diferimento ou crédito presumido).</p>
+          </li>
+          <li data-start="250" data-end="366" class="" style="">
+          <p data-start="253" data-end="366" class=""><strong data-start="253" data-end="283">Coleta de Documentos-Chave</strong><br data-start="283" data-end="286">
+          Levantamento de SPED ICMS, DRE, Balancete, LALUR e comprovantes do benefício.</p>
+          </li>
+          <li data-start="368" data-end="501" class="" style="">
+          <p data-start="371" data-end="501" class=""><strong data-start="371" data-end="401">Análise Técnica e Jurídica</strong><br data-start="401" data-end="404">
+          Avaliação da viabilidade legal e contábil para enquadramento como subvenção para investimento.</p>
+          </li>
+          <li data-start="503" data-end="618" class="" style="">
+          <p data-start="506" data-end="618" class=""><strong data-start="506" data-end="534">Reclassificação Contábil</strong><br data-start="534" data-end="537">
+          Ajuste da escrituração para exclusão correta dos valores da base de IRPJ/CSLL.</p>
+          </li>
+          <li data-start="620" data-end="722" class="" style="">
+          <p data-start="623" data-end="722" class=""><strong data-start="623" data-end="655">Simulação da Economia Fiscal</strong><br data-start="655" data-end="658">
+          Estimativa do ganho tributário com a aplicação da estratégia.</p>
+          </li>
+          <li data-start="724" data-end="838" class="" style="">
+          <p data-start="727" data-end="838" class=""><strong data-start="727" data-end="754">Suporte à Implementação</strong><br data-start="754" data-end="757">
+          Acompanhamento técnico para adoção da estratégia e preparo para fiscalizações.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-list-check icon"></i>Problemas que Resolve
+      </label>
+      <div class="form-value">
+        <ol data-start="110" data-end="622">
+          <li data-start="110" data-end="199" class="" style="">
+          <p data-start="113" data-end="199" class="">Aproveitamento incorreto de incentivos fiscais estaduais nas operações de importação</p>
+          </li>
+          <li data-start="200" data-end="289" class="" style="">
+          <p data-start="203" data-end="289" class="">Pagamento excessivo de IRPJ e CSLL por não exclusão dos benefícios fiscais estaduais</p>
+          </li>
+          <li data-start="290" data-end="361" class="" style="">
+          <p data-start="293" data-end="361" class="">Desconhecimento técnico sobre a viabilidade jurídica da estratégia</p>
+          </li>
+          <li data-start="362" data-end="450" class="" style="">
+          <p data-start="365" data-end="450" class="">Escrituração contábil inadequada dos incentivos fiscais, impedindo a exclusão legal</p>
+          </li>
+          <li data-start="451" data-end="525" class="" style="">
+          <p data-start="454" data-end="525" class="">Falta de documentação válida para comprovação em caso de fiscalização</p>
+          </li>
+          <li data-start="526" data-end="622" class="">
+          <p data-start="529" data-end="622" class="">Ausência de previsibilidade financeira sobre o impacto dos incentivos no resultado tributário</p>
+          </li>
+          </ol>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="	fas fa-trophy icon"></i>Benefícios
+      </label>
+      <div class="form-value">
+        <ol data-start="108" data-end="533">
+          <li data-start="108" data-end="193" class="">
+          <p data-start="111" data-end="193" class="">Redução efetiva da carga tributária de IRPJ e CSLL sobre operações de importação</p>
+          </li>
+          <li data-start="194" data-end="281" class="">
+          <p data-start="197" data-end="281" class="">Aproveitamento estratégico e seguro dos benefícios fiscais estaduais já concedidos</p>
+          </li>
+          <li data-start="282" data-end="367" class="">
+          <p data-start="285" data-end="367" class="">Escrituração contábil adequada que viabiliza a exclusão dos valores incentivados</p>
+          </li>
+          <li data-start="368" data-end="453" class="">
+          <p data-start="371" data-end="453" class="">Aumento da previsibilidade financeira com base em simulação técnica do benefício</p>
+          </li>
+          <li data-start="454" data-end="533" class="">
+          <p data-start="457" data-end="533" class="">Segurança jurídica e documental para sustentar a estratégia em fiscalizações</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="estrategia" class="tab-content">
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-fire icon"></i>Prioridade de Venda</label>
+        <div class="form-value">Alta</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-lightbulb icon"></i>Quando Ofertar</label>
+      <div class="form-value">
+        <ol data-start="96" data-end="538">
+          <li data-start="96" data-end="186" class="">
+          <p data-start="99" data-end="186" class="">Identificação de diferimento ou crédito presumido de ICMS nas operações de importação</p>
+          </li>
+          <li data-start="187" data-end="271" class="">
+          <p data-start="190" data-end="271" class="">Início de revisão contábil, reorganização societária ou estruturação tributária</p>
+          </li>
+          <li data-start="272" data-end="356" class="">
+          <p data-start="275" data-end="356" class="">Execução ou preparação do planejamento tributário anual no regime do Lucro Real</p>
+          </li>
+          <li data-start="357" data-end="435" class="">
+          <p data-start="360" data-end="435" class="">Concessão recente de incentivos fiscais estaduais vinculados à importação</p>
+          </li>
+          <li data-start="436" data-end="538" class="">
+          <p data-start="439" data-end="538" class="">Busca por alternativas legais para reduzir IRPJ/CSLL sem alterar a estrutura operacional da empresa</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-gem icon"></i>Proposta de Valor</label>
+      <div class="form-value">A Subvenção para Investimento – Importação é uma estratégia altamente técnica e subutilizada que transforma os incentivos fiscais estaduais já concedidos nas importações em economia direta e segura sobre o IRPJ e a CSLL. Por meio de análise jurídica, reclassificação contábil e estruturação fiscal completa, a Funcional garante que a empresa aproveite esse benefício com segurança documental, retorno financeiro concreto e total conformidade legal. Tudo isso sem impacto na operação, com o suporte de uma equipe especializada em oportunidades tributárias de alta complexidade.
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-shopping-basket icon"></i>Cross-selling</label>
+      <div class="form-value">
+     
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Produto Complementar</th>
+              <th>Justificativa da Conexão</th>
+              <th>Área Responsável</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Planejamento Tributário</td>
+              <td>Permite antecipar o melhor cenário para aplicação das subvenções e simular impactos na carga tributária.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Exclusão do Crédito Presumido de ICMS do IRPJ/CSLL - Pacto Federativo</td>
+              <td>Complementa a exclusão de subvenções aplicadas à importação com outra tese voltada ao IRPJ/CSLL.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Consultoria e Assessoria no Requerimento de Depreciação Acelerada</td>
+              <td>Também gera redução de IRPJ/CSLL e pode ser integrada no mesmo planejamento fiscal.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Recuperação de Tributos - IRPJ / CSLL</td>
+              <td>Complementa a exclusão de base com análise de valores pagos a maior nos últimos anos.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Auditoria de Obrigações Acessórias</td>
+              <td>Garante conformidade e integridade na escrituração das subvenções aplicadas nas importações.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>BPO Contábil e Tributário - Indústria e Comércio</td>
+              <td>Viabiliza a correta escrituração contábil dos incentivos fiscais aplicáveis à importação.</td>
+              <td>Contabilidade</td>
+            </tr>
+            <tr>
+              <td>Valuation</td>
+              <td>Empresas que aplicam subvenções tendem a valorizar seus ativos; o valuation ajuda a tangibilizar esse crescimento.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>Reorganização Societária</td>
+              <td>Pode ser necessária para otimizar a estrutura fiscal e o aproveitamento das subvenções.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Auditoria Independente</td>
+              <td>Valida os efeitos da subvenção na contabilidade e demonstra transparência para stakeholders.</td>
+              <td>Auditoria</td>
+            </tr>
+            <tr>
+              <td>Estruturação de Crédito via Securitizadora</td>
+              <td>Clientes que economizam com subvenções podem usar a liquidez para acessar operações estruturadas.</td>
+              <td>Investimentos</td>
+            </tr>
+            <tr>
+              <td>Planejamento Sucessório e Patrimonial</td>
+              <td>Empresas com ganho patrimonial a partir de subvenções podem estruturar proteção de ativos.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Diagnóstico Empresarial</td>
+              <td>Avalia a maturidade da empresa para aplicação de estratégias fiscais mais avançadas como subvenções.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>B.I. – Horas de Desenvolvimento</td>
+              <td>Permite criar dashboards que acompanham os ganhos com subvenções e o impacto fiscal mensal.</td>
+              <td>B.I.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div id="qualificacao" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-briefcase icon"></i>Regime Tributário Atendimento</label>
+      <div class="form-value">Lucro Real</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-sync-alt icon"></i>Tipo de Cobrança</label>
+        <div class="form-value">Êxito</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-globe icon"></i>Abrangência Geográfica</label>
+      <div class="form-value">Nacional</div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class=" fas fa-file-invoice-dollar icon"></i>Faturamento Ideal</label>
+        <div class="form-value">Faturamento com benefício 200k Real e 500k Presumido (Mensal)</div>
+      </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-paperclip icon"></i>Documentos Solicitados</label>
+        <div class="form-value">
+          <ol data-start="63" data-end="542">
+            <li data-start="63" data-end="105" class="" style="">
+            <p data-start="66" data-end="105" class="">Fatura Comercial (Commercial Invoice)</p>
+            </li>
+            <li data-start="106" data-end="163" class="" style="">
+            <p data-start="109" data-end="163" class="">Conhecimento de Embarque (Bill of Lading, AWB, etc.)</p>
+            </li>
+            <li data-start="164" data-end="201" class="" style="">
+            <p data-start="167" data-end="201" class="">Packing List (Romaneio de Carga)</p>
+            </li>
+            <li data-start="202" data-end="228" class="" style="">
+            <p data-start="205" data-end="228" class="">Certificado de Origem</p>
+            </li>
+            <li data-start="229" data-end="266" class="" style="">
+            <p data-start="232" data-end="266" class="">Licenciamento de Importação (LI)</p>
+            </li>
+            <li data-start="267" data-end="301" class="" style="">
+            <p data-start="270" data-end="301" class="">Declaração de Importação (DI)</p>
+            </li>
+            <li data-start="302" data-end="334" class="" style="">
+            <p data-start="305" data-end="334" class="">Ato Concessivo da Subvenção</p>
+            </li>
+            <li data-start="335" data-end="372" class="" style="">
+            <p data-start="338" data-end="372" class="">Certidões de Regularidade Fiscal</p>
+            </li>
+            <li data-start="373" data-end="412" class="" style="">
+            <p data-start="376" data-end="412" class="">Escrituração Contábil Fiscal (ECF)</p>
+            </li>
+            <li data-start="413" data-end="466" class="" style="">
+            <p data-start="417" data-end="466" class="">Adesão ao Domicílio Tributário Eletrônico (DTE)</p>
+            </li>
+            <li data-start="467" data-end="542" class="" style="">
+            <p data-start="471" data-end="542" class="">Documentos comprobatórios da aplicação do benefício nos investimentos</p>
+            </li>
+            </ol>
+                </div>
+        
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Setores ICP</label>
+                <div class="form-value"> Transporte,Indústria, Comércio </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fas fa-exclamation-circle icon"></i>Objeções Mapeadas</label>
+                <div class="form-value">
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Objeção</th>
+                        <th>O que o cliente quer dizer</th>
+                        <th>Como contornar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>“A gente já usa benefício fiscal na importação, não precisa disso.”</td>
+                        <td>Ele acha que já está aproveitando tudo que pode e não vê conexão com IRPJ/CSLL.</td>
+                        <td>Explique que o uso do benefício no ICMS é diferente da exclusão na base do IRPJ/CSLL, e que poucas empresas fazem isso corretamente, mesmo tendo o benefício. Ofereça uma simulação gratuita como porta de entrada.</td>
+                      </tr>
+                      <tr>
+                        <td>“Minha contabilidade nunca falou sobre isso.”</td>
+                        <td>Ele confia totalmente na contabilidade ou teme conflitos com o contador.</td>
+                        <td>Posicione a Funcional como parceira técnica da contabilidade, reforçando que esse é um tema muito específico, geralmente fora da rotina dos escritórios. Mostre como o trabalho valoriza e apoia o contador atual.</td>
+                      </tr>
+                      <tr>
+                        <td>“Não quero mexer com isso agora, estamos com outros projetos.”</td>
+                        <td>Ele está com a equipe sobrecarregada ou tem outras prioridades no momento.</td>
+                        <td>Traga a proposta de baixo esforço operacional: "Nossa equipe faz tudo por fora, você só precisa nos enviar a documentação básica. Geração de caixa sem sobrecarregar ninguém."</td>
+                      </tr>
+                      <tr>
+                        <td>“Isso é muito arriscado, pode dar problema com a Receita.”</td>
+                        <td>Ele tem medo de autuação e dúvidas sobre a legalidade da estratégia.</td>
+                        <td>Reforce que a estratégia tem respaldo jurídico e jurisprudência atual, com base em decisões do STJ. Mostre que a execução é documentada, segura e 100% defensável em caso de fiscalização.</td>
+                      </tr>
+                      <tr>
+                        <td>“Isso dá resultado mesmo? Quanto eu economizaria com isso?”</td>
+                        <td>Ele quer saber se vale a pena o investimento e qual o retorno real.</td>
+                        <td>Explique que o serviço só avança após simulação técnica detalhada com base nos dados da empresa, e que o modelo é por êxito, garantindo ganho financeiro concreto antes da cobrança.</td>
+                      </tr>
+                      <tr>
+                        <td>“A gente tentou algo assim antes e não funcionou.”</td>
+                        <td>Já teve uma experiência frustrante com consultoria fiscal ou execução mal feita.</td>
+                        <td>Valide a frustração e mostre a diferença de abordagem: “Por isso nosso modelo é baseado em análise técnica, reclassificação contábil estruturada e documentação completa. Nada é feito de forma genérica.”</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                                    
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Personas</label>
+                <div class="form-value">
+                    <ul data-start="107" data-end="257">
+                        <li data-start="107" data-end="173" class="" style="">
+                        <p data-start="109" data-end="173" class=""><strong data-start="109" data-end="129">Influenciadores:</strong> Consultor, Controller, Gerente Financeiro</p>
+                        </li>
+                        <li data-start="174" data-end="257" class="" style="">
+                        <p data-start="176" data-end="257" class=""><strong data-start="176" data-end="190">Decisores:</strong> CFO, Proprietários, Sócios</p>
+                        </li>
+                        </ul> </div>
+              </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-star-half-alt icon"></i>Diferenciais</label>
+      <div class="form-value">A Funcional se destaca por oferecer uma abordagem especializada e segura para empresas que se beneficiam de incentivos fiscais estaduais na importação de bens destinados ao ativo imobilizado. Atuamos com uma equipe multidisciplinar que compreende as complexidades da legislação estadual, dos regimes especiais (como isenções de ICMS) e da correta contabilização desses incentivos como subvenção para investimento.
+
+        Nosso diferencial está na análise criteriosa da operação, da documentação de importação, do vínculo com o projeto incentivado e da aplicação contábil e fiscal do benefício, com entrega de parecer técnico, organização dos documentos exigidos e suporte total na exclusão do IRPJ/CSLL.
+        
+        Além disso, antecipamos riscos de glosa fiscal e orientamos ajustes nos processos internos, garantindo que o benefício seja aproveitado com segurança jurídica e respaldo técnico — algo que muitos concorrentes deixam de entregar ou tratam com superficialidade.
+        
+        Com a Funcional, o cliente ganha economia real com blindagem completa.
+        
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
